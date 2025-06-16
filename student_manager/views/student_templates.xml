@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="students_page" name="Students Page">
+        <t t-call="website.layout">
+            <div class="container mt-4">
+                <h1>Students</h1>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Sex</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="students" t-as="student">
+                            <tr>
+                                <td><t t-esc="student.name"/></td>
+                                <td><t t-esc="student.age"/></td>
+                                <td><t t-esc="student.sex"/></td>
+                                <td><t t-esc="student.email"/></td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </t>
+    </template>
+</odoo>
